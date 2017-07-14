@@ -1,8 +1,8 @@
 {%set name = "portend" %}
-{%set version = "1.8" %}
+{%set version = "2.1.2" %}
 {%set compress_type = "tar.gz" %}
 {%set hash_type = "sha256" %}
-{%set hash_val = "7de919b82c4ac60d4768fe80a2557290661aa665b7c427de6249d8cb2fde5561" %}
+{%set hash_val = "8407621ba5f095439b19dedaf38f0911a7f261e1f4b74a74e9d513637358a837" %}
 {%set build_num = "0" %}
 
 package:
