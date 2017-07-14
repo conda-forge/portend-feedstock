@@ -1,21 +1,21 @@
-{%set name = "portend" %}
-{%set version = "2.1.2" %}
-{%set compress_type = "tar.gz" %}
-{%set hash_type = "sha256" %}
-{%set hash_val = "8407621ba5f095439b19dedaf38f0911a7f261e1f4b74a74e9d513637358a837" %}
-{%set build_num = "0" %}
+{% set name = "portend" %}
+{% set version = "2.1.2" %}
+{% set bundle = "tar.gz" %}
+{% set hash_type = "sha256" %}
+{% set hash = "8407621ba5f095439b19dedaf38f0911a7f261e1f4b74a74e9d513637358a837" %}
+{% set build = 0 %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  fn: {{ name }}-{{ version }}.{{ compress_type }}
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.{{ compress_type }}
-  {{ hash_type }}: {{ hash_val }}
+  fn: {{ name }}-{{ version }}.{{ bundle }}
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.{{ bundle }}
+  {{ hash_type }}: {{ hash }}
 
 build:
-  number: {{ build_num }}
+  number: {{ build }}
   script: python setup.py install --single-version-externally-managed --record=record.txt
 
 requirements:
@@ -26,7 +26,7 @@ requirements:
 
   run:
     - python
-    - tempora
+    - tempora >=1.8
 
 test:
   imports:
