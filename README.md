@@ -14,12 +14,15 @@ Summary: TCP port monitoring utilities
 Current build status
 ====================
 
-All platforms: [![Circle CI](https://circleci.com/gh/conda-forge/portend-feedstock.svg?style=shield)](https://circleci.com/gh/conda-forge/portend-feedstock)
+All platforms:
+[![noarch](https://img.shields.io/circleci/project/github/conda-forge/portend-feedstock/master.svg?label=noarch)](https://circleci.com/gh/conda-forge/portend-feedstock)
 
 Current release info
 ====================
-Version: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/portend/badges/version.svg)](https://anaconda.org/conda-forge/portend)
-Downloads: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/portend/badges/downloads.svg)](https://anaconda.org/conda-forge/portend)
+
+| Name | Downloads | Version | Platforms |
+| --- | --- | --- | --- |
+| [![Conda Recipe](https://img.shields.io/badge/recipe-portend-green.svg)](https://anaconda.org/conda-forge/portend) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/portend.svg)](https://anaconda.org/conda-forge/portend) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/portend.svg)](https://anaconda.org/conda-forge/portend) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/portend.svg)](https://anaconda.org/conda-forge/portend) |
 
 Installing portend
 ==================
