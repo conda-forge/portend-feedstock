@@ -1,29 +1,24 @@
 {% set name = "portend" %}
 {% set version = "2.5" %}
-{% set bundle = "tar.gz" %}
-{% set hash_type = "sha256" %}
-{% set hash = "19dc27bfb3c72471bd30a235a4d5fbefef8a7e31cab367744b5d87a205e7bfd9" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  fn: {{ name }}-{{ version }}.{{ bundle }}
-  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.{{ bundle }}
-  {{ hash_type }}: {{ hash }}
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  sha256: 19dc27bfb3c72471bd30a235a4d5fbefef8a7e31cab367744b5d87a205e7bfd9
 
 build:
   noarch: python
-  number: 0
-  script: python -m pip install --no-deps --ignore-installed .
+  number: 1
+  script: "{{ PYTHON }} -m pip install . -vv"
 
 requirements:
-  build:
+  host:
     - python
     - pip
     - setuptools_scm >=1.15.0
-
   run:
     - python
     - tempora >=1.8
@@ -34,12 +29,13 @@ test:
 
 about:
   home: https://github.com/jaraco/portend
-  # license_file: No license or manifest - see https://github.com/jaraco/portend/issues/3
   license: MIT
   license_family: MIT
+  license_file: LICENSE
   summary: TCP port monitoring utilities
   dev_url: https://github.com/jaraco/portend
 
 extra:
   recipe-maintainers:
     - pmlandwehr
+    - carlodri
