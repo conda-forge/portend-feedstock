@@ -1,5 +1,5 @@
 {% set name = "portend" %}
-{% set version = "2.6" %}
+{% set version = "2.7.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 600dd54175e17e9347e5f3d4217aa8bcf4bf4fa5ffbc4df034e5ec1ba7cdaff5
+  sha256: ac0e57ae557f75dc47467579980af152e8f60bc2139547eff8469777d9110379
 
 build:
   noarch: python
@@ -16,11 +16,11 @@ build:
 
 requirements:
   host:
-    - python
+    - python >=3.6
     - pip
-    - setuptools_scm >=1.15.0
+    - setuptools_scm >=3.4.1
   run:
-    - python
+    - python >=3.6
     - tempora >=1.8
 
 test:
