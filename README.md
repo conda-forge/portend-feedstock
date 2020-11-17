@@ -5,11 +5,11 @@ Home: https://github.com/jaraco/portend
 
 Package license: MIT
 
-Feedstock license: BSD 3-Clause
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/portend-feedstock/blob/master/LICENSE.txt)
 
 Summary: TCP port monitoring utilities
 
-
+Development: https://github.com/jaraco/portend
 
 Current build status
 ====================
