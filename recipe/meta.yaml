@@ -1,5 +1,5 @@
 {% set name = "portend" %}
-{% set version = "2.7.1" %}
+{% set version = "3.0.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 986ed9a278e64a87b5b5f4c21e61c25bebdce9919a92238d9c14c37a7416482b
+  sha256: df891766ee4fd887d83051b5ee9524aaad95a626f56faf5790682b6250ef03b9
 
 build:
   noarch: python
